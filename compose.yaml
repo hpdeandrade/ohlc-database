@@ -1,0 +1,9 @@
+services:
+  qb-database:
+    image: timescale/timescaledb-ha:pg16
+    container_name: timescaledb
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+    restart: "no"
